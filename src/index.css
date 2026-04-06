@@ -1,0 +1,47 @@
+
+/* global.css */
+ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+ 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ─── GLOBAL RESET for Focus Rings ─── */
+/* This removes that green/blue outline that stays after clicking any button */
+button:focus, 
+button:active,
+a:focus,
+a:active,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Override Tailwind's default focus-ring behavior if used */
+.focus-ring, .focus-visible:ring-2 {
+    --tw-ring-offset-width: 0px !important;
+    --tw-ring-width: 0px !important;
+    outline: none !important;
+}
