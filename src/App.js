@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation, Navigate, useNavigate } from 'react-router-dom';
+import { Route, Routes, useLocation, Navigate, useNavigate } from 'react-router-dom';
 
 // ─── Shared / Infrastructure ───────────────────────────────────────────────────
-import { ToastProvider } from './screens/Toast/ToastProvider';
 import { PageLoader } from './screens/Loader/Loader';
 import NoNetwork, { useNetworkStatus } from './screens/NoNetwork/NoNetwork';
 import { authAPI, productAPI, cartAPI } from './services/api';
@@ -23,7 +22,7 @@ import OrdersScreen from './screens/customer/OrdersScreen/OrdersScreen';
 import ProfileScreen from './screens/customer/ProfileScreen/ProfileScreen';
 import WishlistScreen from './screens/customer/WishlistScreen/WishlistScreen';
 import NotFoundScreen from './screens/customer/NotFoundScreen/NotFoundScreen';
-import { ConfirmationProvider, useConfirmation } from './screens/Modal/ConfirmationProvider';
+import { useConfirmation } from './screens/Modal/ConfirmationProvider';
 
 // ─── Admin Screens ─────────────────────────────────────────────────────────────
 import AdminDashboardScreen from './screens/admin/DashboardScreen/DashboardScreen';
@@ -203,7 +202,7 @@ const App = () => {
     }
     const timer = setTimeout(() => setAppReady(true), 600);
     return () => clearTimeout(timer);
-  }, []);
+  }, [selectedCategory]);
 
   const fetchCart = async () => {
     try {

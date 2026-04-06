@@ -1,8 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const EmptyState = ({ icon: Icon, title, subtitle, buttonText = "Start Shopping", accentColor = "green" }) => {
-  const navigate = useNavigate();
 
   const colors = {
     green: {

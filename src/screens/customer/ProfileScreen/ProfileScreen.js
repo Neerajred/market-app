@@ -400,26 +400,5 @@ const InputGroup = ({ icon: Icon, label, value, onChange, readonly = false }) =>
   </div>
 );
 
-const EmptyDataState = ({ icon: Icon, title, subtitle }) => {
-   const navigate = useNavigate();
-   return (
-    <div className="py-20 text-center bg-white rounded-[2.5rem] border border-gray-50 flex flex-col items-center shadow-sm px-6">
-      <div className="relative mb-6">
-         <div className="w-24 h-24 bg-green-50 rounded-full animate-pulse"></div>
-         <div className="absolute inset-0 flex items-center justify-center text-green-500">
-            <Icon size={40} strokeWidth={1.5} />
-         </div>
-      </div>
-      <h3 className="text-xl font-black text-gray-800 mb-2">{title}</h3>
-      <p className="text-sm text-gray-400 font-medium max-w-xs mx-auto mb-8 leading-relaxed">{subtitle}</p>
-      <button 
-        onClick={() => navigate('/')}
-        className="flex items-center gap-2 bg-green-600 text-white px-8 py-3.5 rounded-2xl font-black uppercase tracking-widest text-[11px] shadow-lg shadow-green-100 hover:bg-green-700 hover:-translate-y-0.5 transition-all"
-      >
-        <span>Continue Shopping</span>
-      </button>
-    </div>
-   );
-};
 
 export default ProfilePage;
