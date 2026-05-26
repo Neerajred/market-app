@@ -1,0 +1,22 @@
+.rating-stars {
+    display: inline-block;
+    font-size: 12px; /* Adjust size as needed */
+  }
+  
+  .rating-stars span {
+    display: inline-block;
+    margin-right: 2px; /* Adjust spacing between stars */
+  }
+  
+  .star-filled {
+    color: gold; /* Filled star color */
+  }
+  
+  .star-half-filled {
+    color: gold; /* Half-filled star color */
+  }
+  
+  .star-unfilled {
+    color: lightgray; /* Unfilled star color */
+  }
+  
